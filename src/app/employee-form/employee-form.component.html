@@ -1,0 +1,189 @@
+<!-- Section: Design Block -->
+<section class="background-radial-gradient overflow-hidden">
+
+    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+
+        <div class="row gx-lg-5 align-items-center mb-5">
+
+            <div class="col-lg-3 mb-5 mb-lg-0 position-relative"></div>
+            <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+                <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+                <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+                <div class="card bg-glass">
+                    <div class="card-body px-5 py-4 px-md-5">
+                        <form>
+                            <h5>Add Employee </h5><br>
+                            <!-- 2 column grid layout with text inputs for the first and last names -->
+
+
+                            <!-- <div class="form-outline mb-4">
+                                <input [(ngModel)]="EmployeeData.FirstName" name="FirstName" type="text"
+                                    id="form3Example3" class="form-control" placeholder="First Name" />
+                                <div *ngIf="submitted && EmployeeData.FirstName==''"
+                                    class="form-outline text-danger ms-1" style="font-size: 0.8em;">
+                                    <p>First Name is Required</p>
+                                </div>
+                            </div> -->
+                            <div class="form-outline mb-4">
+                                <!-- <label for="firstName">First Name</label> -->
+                                <input type="text" id="firstName" name="FirstName" [(ngModel)]="EmployeeData.FirstName"
+                                    class="form-control" placeholder="First Name" required>
+
+                                <div *ngIf="submitted && !EmployeeData.FirstName" class="form-outline text-danger ms-1"
+                                    style="font-size: 0.8em;">
+                                    <p>First Name is required</p>
+                                </div>
+
+                                <div *ngIf="serverErrors['FirstName']" class="form-outline text-danger ms-1"
+                                    style="font-size: 0.8em;">
+                                    <div *ngFor="let error of serverErrors['FirstName']">{{ error }}</div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-outline mb-4">
+                                <input [(ngModel)]="EmployeeData.LastName" name="LastName" type="text"
+                                    id="form3Example3" class="form-control" placeholder="Last Name" required />
+
+                                <div *ngIf="submitted && !EmployeeData.LastName" class="form-outline text-danger ms-1"
+                                    style="font-size: 0.8em;">
+                                    <p>Last Name is required</p>
+                                </div>
+
+                                <div *ngIf="serverErrors['LastName']" class="form-outline text-danger ms-1"
+                                    style="font-size: 0.8em;">
+                                    <div *ngFor="let error of serverErrors['LastName']">{{ error }}</div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-outline mb-4">
+                                <input [(ngModel)]="EmployeeData.Email" name="Email" type="email" id="form3Example4"
+                                    class="form-control" placeholder="Email" required />
+
+                                <div *ngIf="submitted && !EmployeeData.Email" class="form-outline text-danger ms-1"
+                                    style="font-size: 0.8em;">
+                                    <p>Email is required</p>
+                                </div>
+
+                                <div *ngIf=" this.ErrorInEmail" class="form-outline text-danger ms-1"
+                                    style="font-size: 0.8em;">
+                                    <div *ngFor="let error of  this.ErrorInEmail">{{ error }}</div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-outline mb-4">
+                                <input [(ngModel)]="EmployeeData.Skills" name="Skills" type="text" id="form3Example4"
+                                    class="form-control" placeholder="Skills" required />
+
+                                <div *ngIf="submitted && !EmployeeData.Skills" class="form-outline text-danger ms-1"
+                                    style="font-size: 0.8em;">
+                                    <p>Skills are required</p>
+                                </div>
+
+                                <div *ngIf="serverErrors['Skills']" class="form-outline text-danger ms-1"
+                                    style="font-size: 0.8em;">
+                                    <div *ngFor="let error of serverErrors['Skills']">{{ error }}</div>
+                                </div>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <input [(ngModel)]="EmployeeData.PhoneNumber" name="PhoneNumber" type="text"
+                                    id="form3Example4" class="form-control" placeholder="Phone Number" required />
+
+                                <div *ngIf="submitted && !EmployeeData.PhoneNumber"
+                                    class="form-outline text-danger ms-1" style="font-size: 0.8em;">
+                                    <p>Phone Number is required</p>
+                                </div>
+
+                                <div *ngIf="this.ErrorInPhoneNumber" class="form-outline text-danger ms-1"
+                                    style="font-size: 0.8em;">
+                                    <div *ngFor="let error of this.ErrorInPhoneNumber">{{ error }}</div>
+                                </div>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <input [(ngModel)]="EmployeeData.Department" name="Department" type="text"
+                                    id="form3Example4" class="form-control" placeholder="Department" required />
+
+                                <div *ngIf="submitted && !EmployeeData.Department" class="form-outline text-danger ms-1"
+                                    style="font-size: 0.8em;">
+                                    <p>Department is required</p>
+                                </div>
+
+                                <div *ngIf="serverErrors['Department']" class="form-outline text-danger ms-1"
+                                    style="font-size: 0.8em;">
+                                    <div *ngFor="let error of serverErrors['Department']">{{ error }}</div>
+                                </div>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <input [(ngModel)]="EmployeeData.Position" name="Position" type="text"
+                                    id="form3Example4" class="form-control" placeholder="Position" required />
+
+                                <div *ngIf="submitted && !EmployeeData.Position" class="form-outline text-danger ms-1"
+                                    style="font-size: 0.8em;">
+                                    <p>Position is required</p>
+                                </div>
+
+                                <div *ngIf="serverErrors['Position']" class="form-outline text-danger ms-1"
+                                    style="font-size: 0.8em;">
+                                    <div *ngFor="let error of serverErrors['Position']">{{ error }}</div>
+                                </div>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <input [(ngModel)]="EmployeeData.DateOfJoining" name="DateOfJoining" type="date"
+                                    id="form3Example4" class="form-control" placeholder="Date Of Joining" required />
+
+                                <!-- <div *ngIf="submitted && !EmployeeData.DateOfJoining"
+                                    class="form-outline text-danger ms-1" style="font-size: 0.8em;">
+                                    <p>Date Of Joining is required</p>
+                                </div> -->
+
+                                <div *ngIf="serverErrors['DateOfJoining']" class="form-outline text-danger ms-1"
+                                    style="font-size: 0.8em;">
+                                    <div *ngFor="let error of serverErrors['DateOfJoining']">{{ error }}</div>
+                                </div>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <input [(ngModel)]="EmployeeData.Salary" name="Salary" type="text" id="form3Example4"
+                                    class="form-control" placeholder="Salary" required />
+
+                                <div *ngIf="submitted && !EmployeeData.Salary" class="form-outline text-danger ms-1"
+                                    style="font-size: 0.8em;">
+                                    <p>Salary is required</p>
+                                </div>
+
+                                <div *ngIf="this.ErrorInSalary" class="form-outline text-danger ms-1"
+                                    style="font-size: 0.8em;">
+                                    <div *ngFor="let error of this.ErrorInSalary">{{ error }}</div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- Submit button -->
+                            <button (click)="saveEmployee()" type="submit" class="btn btn-success btn-block mb-4">
+                                Add
+                            </button><br>
+
+                            <button (click)="GoBack()" type="submit" class="btn btn-success btn-block mb-4"> Employee
+                                List</button>
+
+
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-5 mb-lg-0 position-relative"></div>
+        </div>
+    </div>
+</section>
+<!-- Section: Design Block -->

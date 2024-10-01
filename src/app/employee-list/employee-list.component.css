@@ -1,0 +1,21 @@
+
+.product-list input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 6px; /* Decreased spacing */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.product-list table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.product-list th,
+.product-list td {
+    padding: 6px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
